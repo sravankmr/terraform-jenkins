@@ -1,0 +1,24 @@
+**Job Description**  
+We are looking for an experienced Terraform Developer to help automate and deploy cloud resources on Google Cloud Platform (GCP). The infrastructure should be managed through Terraform, with deployments executed via GitHub Actions.  
+
+**Project Scope**  
+- Set up and manage two environments: Staging and Production.  
+- Implement Terraform plan and apply as part of a GitHub Actions workflow.  
+- Enable the creation and management of:  
+  - IAM users  
+  - Service accounts  
+  - BigQuery datasets  
+  - GCS buckets  
+
+**Access Control Requirements**  
+- Each IAM user and service account should be restricted to:  
+  - A single GCS bucket specifically created for them.  
+  - A single BigQuery dataset assigned to them.  
+- No project-wide permissions should be granted.  
+
+**Ideal Candidate Qualifications**  
+- Proven experience with Terraform for managing GCP infrastructure.  
+- Familiarity with GitHub Actions for CI/CD automation.  
+- Strong understanding of IAM policies and resource access control in GCP.  
+- Experience with BigQuery and Cloud Storage (GCS).  
+- Ability to deliver well-documented, scalable, and maintainable Terraform code.
