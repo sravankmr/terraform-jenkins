@@ -1,0 +1,39 @@
+name: Terraform Deployment
+
+on:
+  push:
+    branches:
+      - main
+      - staging
+
+jobs:
+  terraform:
+    name: 'Terraform Plan and Apply'
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Setup Terraform
+        uses: hashicorp/setup-terraform@v2
+        with:
+          terraform_version: 1.5.0
+
+      - name: Authenticate with GCP
+        uses: google-github-actions/auth@v1
+        with:
+          credentials_json: ${{ secrets.GCP_CREDENTIALS }}
+
+      - name: Initialize Terraform
+        run: terraform init
+
+      - name: Format Terraform Code
+        run: terraform fmt -check
+
+      - name: Plan Terraform Changes
+        run: terraform plan -var-file=terraform.tfvars
+
+      - name: Apply Terraform Changes
+        if: github.ref == 'refs/heads/main'
+        run: terraform apply -auto-approve -var-file=terraform.tfvars
