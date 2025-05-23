@@ -1,0 +1,4 @@
+how to install postgresql db and sonarqube on aks cluster
+
+https://www.youtube.com/watch?v=Cx99GhrZglw&ab_channel=techontarget
+
