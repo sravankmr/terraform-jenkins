@@ -1,0 +1,62 @@
+Could you provide an overview of your experience in Site Reliability Engineering or DevOps? What responsibilities did you handle?
+
+
+below are few of my tasks performed in current and past job
+
+Designing and implementing CI/CD pipelines to automate builds, testing, and deployments.
+
+Managing infrastructure using Infrastructure as Code (IaC) tools like Terraform or Ansible.
+
+Monitoring system performance and health using tools like Prometheus, Grafana, and Datadog.
+
+Setting up alerts and notifications to quickly address critical events or performance deviations.
+
+Troubleshooting deployment failures, infrastructure issues, and system outages.
+
+Collaborating with development, QA, and IT teams to streamline workflows and drive continuous improvement in DevOps practices.
+
+Breaking down organizational silos and fostering a culture of shared responsibility.
+
+Documenting processes and procedures to share knowledge and minimize tribal knowledge.
+
+Integrating security practices into the DevOps pipeline, including continuous security testing and implementing robust security measures.
+
+Ensuring DevOps processes align with security and compliance standards. 
+
+
+---------------------------------------------------------------
+Can you speak to your experience with one of these technologies: Kubernetes, Terraform, CloudFormation, Argo CD, Ansible, Puppet, Chef, or Salt? How did you apply it in your previous role(s)?
+
+The Challenge:
+Our team was managing infrastructure across multiple AWS accounts manually, leading to configuration drift and deployment inconsistencies.
+
+My Implementation:
+Built a modular Terraform structure with reusable modules for VPCs, EKS clusters, and RDS instances
+
+Implemented remote state management using S3 backends with DynamoDB locking
+
+Created environment-specific workspaces for dev/staging/production isolation
+
+Set up CI/CD pipelines in GitLab that automatically ran terraform plan on PRs and terraform apply on merges
+
+Specific Example:
+
+I developed a comprehensive EKS module that included:
+
+Cluster creation with proper IAM roles
+
+Node groups with auto-scaling configurations
+
+Security group rules and network policies
+
+Integration with AWS Load Balancer Controller
+
+Results:
+
+Reduced infrastructure deployment time from 4 hours to 15 minutes
+
+Eliminated configuration drift issues
+
+Improved disaster recovery - could rebuild entire environments from code
+
+Enhanced team collaboration through infrastructure peer reviews
